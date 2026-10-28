@@ -1,7 +1,7 @@
-/* Dictado local: Whisper (Xenova/whisper-base, cuantizado) ejecutado en el propio navegador con transformers.js.
+/* Dictado local: Whisper (Xenova/whisper-small, cuantizado) ejecutado en el propio navegador con transformers.js.
    El audio no se envía a ningún sitio ni se guarda. Solo se descargan la librería (jsdelivr) y el modelo (Hugging Face), una vez. */
 (function(){
-var LIB='https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.8.1',MODEL='Xenova/whisper-base';
+var LIB='https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.8.1',MODEL='Xenova/whisper-small';
 var rec=null,chunks=[],stream=null,busy=false,asr=null,msg='';
 function st(t){msg=t;var e=document.getElementById('vs');if(e)e.textContent=t}
 function paint(){var b=document.getElementById('mic');if(b){b.textContent=rec?'⏹ Detener':'🎤 Dictar';b.disabled=busy}var e=document.getElementById('vs');if(e)e.textContent=msg}
